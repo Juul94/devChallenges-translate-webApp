@@ -7,9 +7,10 @@
             "@images/*": ["src/assets/images/*"],
             "@utilities/*": ["src/utils/*"],
             "@layouts/*": ["src/shared/layouts/*"],
-            "@types/*": ["src/types/*"],
+            "@type/*": ["src/types/*"],
             "@shared/*": ["src/shared/*"],
-            "@assets/*": ["src/assets/*"]
+            "@assets/*": ["src/assets/*"],
+            "@data/*": ["src/data/*"]
         },
         "target": "es6",
         "lib": ["dom", "dom.iterable", "esnext"],
