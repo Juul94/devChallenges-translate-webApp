@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-import { alpha } from '@mui/material/styles';
+import { alpha, SxProps } from '@mui/material/styles';
 import { ReactElement } from 'react';
 
 interface DefaultButtonProps {
@@ -8,15 +8,19 @@ interface DefaultButtonProps {
     endIcon?: ReactElement;
     onClick: () => void;
     isActive?: boolean;
+    disabled?: boolean;
+    sx?: SxProps;
 }
 
-const DefaultButton: React.FC<DefaultButtonProps> = ({ text, onClick, isActive, startIcon, endIcon }) => (
+const DefaultButton: React.FC<DefaultButtonProps> = ({ text, onClick, isActive, startIcon, endIcon, disabled, sx }) => (
     <Button
         variant='text'
         onClick={onClick}
         startIcon={startIcon}
         endIcon={endIcon}
+        disabled={disabled}
         sx={{
+            ...sx,
             color: 'neutral.100',
             textTransform: 'capitalize',
             px: 1,
